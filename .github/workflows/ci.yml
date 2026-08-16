@@ -27,6 +27,13 @@ jobs:
       - name: sttdasdsa
         run: staticcheck ./...
 
+      - name: Install gosec
+        run: go install github.com/securego/gosec/v2/cmd/gosec@latest
+
+      - name: gs
+        run: gosec ./...
+
+
   tests:
     name: Tests
     runs-on: ubuntu-latest
