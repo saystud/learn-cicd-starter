@@ -7,6 +7,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"time"
 
 	"github.com/go-chi/chi"
 	"github.com/go-chi/cors"
@@ -95,6 +96,6 @@ func main() {
 	}
 
 	// Using logrus (if available)
-	log.WithField("port", port).Info("Serving on port")
+// 	log.WithField("port", port).Info("Serving on port")
 	log.Fatal(srv.ListenAndServe())
 }
